@@ -12,6 +12,19 @@ const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2"); 
 const btn3 = document.getElementById("btn3");
 
+const numberOfLeaves = 5;
+
+for (let i = 0; i < numberOfLeaves; i++) {
+  const leaf = document.createElement("img");
+  leaf.src = "https://symbl-cdn.com/i/webp/77/ec9b6d839eb7a9868c98b397842442.webp";
+  leaf.classList.add("leaf");
+
+  leaf.style.left = `${Math.random() * 90}vw`;
+  leaf.style.animationDelay = `${Math.random() * 5}s`;
+
+  document.body.appendChild(leaf);
+}
+
 startBtn.addEventListener("click", () => {
   startScreen.classList.add("flip-out");
 
