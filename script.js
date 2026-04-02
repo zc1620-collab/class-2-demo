@@ -1,17 +1,17 @@
 const startBtn = document.getElementById("startBtn");
 const startScreen = document.getElementById("startScreen");
 const question1 = document.getElementById("question1");
-const nextBtn2 = document.getElementById("nextBtn");
+const nextBtn2 = document.getElementById("nextBtn2");
 const question2 = document.getElementById("question2");
-const nextBtn3 = document.getElementById("nextBtn2");
+const nextBtn3 = document.getElementById("nextBtn3");
 const question3 = document.getElementById("question3");
-const nextBtn4 = document.getElementById("nextBtn3");
+const nextBtn4 = document.getElementById("nextBtn4");
 const question4 = document.getElementById("question4");
-const nextBtn5 = document.getElementById("nextBtn4");
+const nextBtn5 = document.getElementById("nextBtn5");
 const question5 = document.getElementById("question5");
-const nextBtn6 = document.getElementById("nextBtn5");
+const nextBtn6 = document.getElementById("nextBtn6");
 const question6 = document.getElementById("question6");
-const nextBtn7 = document.getElementById("nextBtn6");
+const nextBtn7 = document.getElementById("nextBtn7");
 
 const img1 = document.getElementById("img1"); 
 const img2 = document.getElementById("img2"); 
@@ -31,6 +31,13 @@ const btn8 = document.getElementById("btn8");
 const btn9 = document.getElementById("btn9");
 const btn10 = document.getElementById("btn10"); 
 const btn11 = document.getElementById("btn11");
+
+const result = document.getElementById("result");
+const result2 = document.getElementById("result2");
+const result3 = document.getElementById("result3");
+const result4 = document.getElementById("result4");
+const result5 = document.getElementById("result5");
+const result6 = document.getElementById("result6");
 
 const numberOfLeaves = 5;
 
@@ -59,19 +66,21 @@ const container = document.querySelector(".container");
 
 img1.addEventListener("click", () => {
   img1.classList.toggle("flipped");
-  alert("✅ Correct!");
+  result.textContent = "✅ Correct!";
+  result.style.color = "green";
   container.style.backgroundColor = "lightgreen";
 });
 
 [img2, img3].forEach(img => {
   img.addEventListener("click", () => {
     img.classList.toggle("flipped");
-    alert("❌ Incorrect!");
+    result.textContent = "❌ Incorrect!";
+    result.style.color = "red";
     container.style.backgroundColor = "#ffcccc";
   });
 });
 
-nextBtn.addEventListener("click", () => {
+nextBtn2.addEventListener("click", () => {
   question1.classList.add("flip-out");
 
   setTimeout(() => {
@@ -93,4 +102,104 @@ btn1.addEventListener("click", () => {
     result2.style.color = "red";
     container.style.backgroundColor = "#ffcccc";
   });
+});
+
+nextBtn3.addEventListener("click", () => {
+  question2.classList.add("flip-out");
+
+  setTimeout(() => {
+    question2.style.display = "none";
+    question3.style.display = "block";
+    question3.classList.add("flip-in");
+  }, 500);
+});
+
+btn5.addEventListener("click", () => {
+  result3.textContent = "✅ Correct!";
+  result3.style.color = "green";
+  container.style.backgroundColor = "lightgreen";
+});
+
+[btn4, btn6].forEach(btn => {
+  btn.addEventListener("click", () => {
+    result3.textContent = "❌ Incorrect!";
+    result3.style.color = "red";
+    container.style.backgroundColor = "#ffcccc";
+  });
+});
+
+nextBtn4.addEventListener("click", () => {
+  question3.classList.add("flip-out");
+
+  setTimeout(() => {
+    question3.style.display = "none";
+    question4.style.display = "block";
+    question4.classList.add("flip-in");
+  }, 500);
+});
+
+btn8.addEventListener("click", () => {
+  result4.textContent = "✅ Correct!";
+  result4.style.color = "green";
+  container.style.backgroundColor = "lightgreen";
+});
+
+[btn7].forEach(btn => {
+  btn.addEventListener("click", () => {
+    result4.textContent = "❌ Incorrect!";
+    result4.style.color = "red";
+    container.style.backgroundColor = "#ffcccc";
+  });
+});
+
+nextBtn5.addEventListener("click", () => {
+  question4.classList.add("flip-out");
+
+  setTimeout(() => {
+    question4.style.display = "none";
+    question5.style.display = "block";
+    question5.classList.add("flip-in");
+  }, 500);
+});
+
+btn9.addEventListener("click", () => {
+  result5.textContent = "✅ Correct!";
+  result5.style.color = "green";
+  container.style.backgroundColor = "lightgreen";
+});
+
+[btn10, btn11].forEach(btn => {
+  btn.addEventListener("click", () => {
+    result5.textContent = "❌ Incorrect!";
+    result5.style.color = "red";
+    container.style.backgroundColor = "#ffcccc";
+  });
+});
+
+nextBtn6.addEventListener("click", () => {
+  question5.classList.add("flip-out");
+
+  setTimeout(() => {
+    question5.style.display = "none";
+    question6.style.display = "block";
+    question6.classList.add("flip-in");
+  }, 500);
+});
+
+img6.addEventListener("click", () => {
+  img6.classList.toggle("flipped");
+  result6.textContent = "✅ Correct!";
+  result6.style.color = "green";
+  container.style.backgroundColor = "lightgreen";
+});
+
+[img4, img5].forEach(img => {
+  img.addEventListener("click", () => {
+    img.classList.toggle("flipped");
+    result6.textContent = "❌ Incorrect!";
+    result6.style.color = "red";
+    container.style.backgroundColor = "#ffcccc";
+  });
+
+  nextBtn7.addEventListener(...)
 });
