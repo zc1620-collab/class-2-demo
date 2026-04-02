@@ -52,6 +52,8 @@ for (let i = 0; i < numberOfLeaves; i++) {
   document.body.appendChild(leaf);
 }
 
+let score = 0;
+
 startBtn.addEventListener("click", () => {
   startScreen.classList.add("flip-out");
 
@@ -69,7 +71,8 @@ img1.addEventListener("click", () => {
   result.textContent = "✅ Correct!";
   result.style.color = "green";
   container.style.backgroundColor = "lightgreen";
-});
+  score++;
+  }, { once: true });
 
 [img2, img3].forEach(img => {
   img.addEventListener("click", () => {
@@ -94,7 +97,8 @@ btn1.addEventListener("click", () => {
   result2.textContent = "✅ Correct!";
   result2.style.color = "green";
   container.style.backgroundColor = "lightgreen";
-});
+  score++;
+  }, { once: true });
 
 [btn2, btn3].forEach(btn => {
   btn.addEventListener("click", () => {
@@ -118,7 +122,8 @@ btn5.addEventListener("click", () => {
   result3.textContent = "✅ Correct!";
   result3.style.color = "green";
   container.style.backgroundColor = "lightgreen";
-});
+  score++;
+  }, { once: true });
 
 [btn4, btn6].forEach(btn => {
   btn.addEventListener("click", () => {
@@ -142,7 +147,8 @@ btn8.addEventListener("click", () => {
   result4.textContent = "✅ Correct!";
   result4.style.color = "green";
   container.style.backgroundColor = "lightgreen";
-});
+  score++;
+  }, { once: true });
 
 [btn7].forEach(btn => {
   btn.addEventListener("click", () => {
@@ -166,7 +172,8 @@ btn9.addEventListener("click", () => {
   result5.textContent = "✅ Correct!";
   result5.style.color = "green";
   container.style.backgroundColor = "lightgreen";
-});
+  score++;
+  }, { once: true });
 
 [btn10, btn11].forEach(btn => {
   btn.addEventListener("click", () => {
@@ -191,7 +198,8 @@ img6.addEventListener("click", () => {
   result6.textContent = "✅ Correct!";
   result6.style.color = "green";
   container.style.backgroundColor = "lightgreen";
-});
+  score++;
+  }, { once: true });
 
 [img4, img5].forEach(img => {
   img.addEventListener("click", () => {
@@ -200,6 +208,27 @@ img6.addEventListener("click", () => {
     result6.style.color = "red";
     container.style.backgroundColor = "#ffcccc";
   });
+});
 
-  nextBtn7.addEventListener(...)
+const finalScreen = document.getElementById("finalScreen");
+const finalScore = document.getElementById("finalScore");
+
+nextBtn7.addEventListener("click", () => {
+  question6.classList.add("flip-out");
+
+  setTimeout(() => {
+    question6.style.display = "none";
+    finalScreen.style.display = "block";
+    finalScreen.classList.add("flip-in");
+
+    finalScore.textContent = score + " / 6";
+  }, 500);
+  
+  if (score === 6) {
+  finalScore.textContent = "🌿 Perfect! 6/6 – Leaf Cutter Expert!";
+} else if (score >= 4) {
+  finalScore.textContent = "🐜 Nice! " + score + "/6";
+} else {
+  finalScore.textContent = "🌱 Keep learning! " + score + "/6";
+}
 });
