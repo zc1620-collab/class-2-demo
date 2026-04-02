@@ -143,14 +143,14 @@ nextBtn4.addEventListener("click", () => {
   }, 500);
 });
 
-btn8.addEventListener("click", () => {
+btn7.addEventListener("click", () => {
   result4.textContent = "✅ Correct!";
   result4.style.color = "green";
   container.style.backgroundColor = "lightgreen";
   score++;
   }, { once: true });
 
-[btn7].forEach(btn => {
+[btn8].forEach(btn => {
   btn.addEventListener("click", () => {
     result4.textContent = "❌ Incorrect!";
     result4.style.color = "red";
@@ -221,14 +221,13 @@ nextBtn7.addEventListener("click", () => {
     finalScreen.style.display = "block";
     finalScreen.classList.add("flip-in");
 
-    finalScore.textContent = score + " / 6";
+    if (score === 6) {
+      finalScore.textContent = "🌿 Perfect! 6/6 – Leaf Cutter Expert!";
+    } else if (score >= 4) {
+      finalScore.textContent = "🐜 Nice! " + score + "/6";
+    } else {
+      finalScore.textContent = "🌱 Keep learning! " + score + "/6";
+    }
+
   }, 500);
-  
-  if (score === 6) {
-  finalScore.textContent = "🌿 Perfect! 6/6 – Leaf Cutter Expert!";
-} else if (score >= 4) {
-  finalScore.textContent = "🐜 Nice! " + score + "/6";
-} else {
-  finalScore.textContent = "🌱 Keep learning! " + score + "/6";
-}
 });

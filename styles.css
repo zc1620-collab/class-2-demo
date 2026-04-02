@@ -46,19 +46,20 @@ body {
 }
 
 h1 {
-  font-family: monospace;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 55px
 }
 h2 {
-  font-family: cursive;
+  font-family: Arial, Helvetica, sans-serif;
 }
 img.logo {
   height: 300px;
 }
 
 p {
-  font-family: monospace;
-  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 45px;
+  color:#125121
 }
 
 .result-text {
@@ -107,9 +108,9 @@ p {
   justify-content: center;
   position: relative;
   padding: 0.6em 2em;
-  border: rgb(42, 6, 118) solid 0.15em;
+  border: rgb(21, 119, 37) solid 0.15em;
   border-radius: 0.25em;
-  color: rgb(47, 94, 203);
+  color: rgb(11, 74, 48);
   font-size: 1.5em;
   font-weight: 600;
   cursor: pointer;
@@ -145,7 +146,7 @@ p {
 }
 
 .button:active {
-  border-color: teal;
+  border-color: rgba(0, 128, 62, 0.529);
 }
 
 .button::after, .button::before {
@@ -179,11 +180,73 @@ p {
 
 .button:active:before,
 .button:active:after {
-  background: teal;
+  background: rgba(2, 158, 83, 0.468);
 }
 
-#question2 .button {
-  background-color: sienna;  
-  color: white;              
-  border: 2px solid #8B4513;  
+.q2-container {
+  display: flex;           
+  align-items: flex-start; 
+  gap: 30px;               
+}
+
+.q2-container .buttons {
+  display: flex;
+  flex-direction: column;  
+  gap: 10px;               
+}
+
+img.q2 {
+  height: 150px;
+  flex-shrink: 0;      
+}
+
+.q3-container {
+  display: flex;           
+  align-items: flex-start; 
+  gap: 30px;               
+}
+
+.q3-container .buttons {
+  display: flex;
+  flex-direction: column;  
+  gap: 10px;               
+}
+
+img.q3 {
+  height: 150px;
+  flex-shrink: 0;         
+}
+
+.q4-container {
+  display: flex;           
+  align-items: flex-start; 
+  gap: 30px;               
+}
+
+.q4-container .buttons {
+  display: flex;
+  flex-direction: column;  
+  gap: 10px;               
+}
+
+img.q4 {
+  height: 150px;
+  flex-shrink: 0;         
+}
+
+.q5-container {
+  display: flex;           
+  align-items: flex-start; 
+  gap: 30px;               
+}
+
+.q5-container .buttons {
+  display: flex;
+  flex-direction: column;  
+  gap: 10px;               
+}
+
+img.q5 {
+  height: 150px;
+  flex-shrink: 0;         
 }

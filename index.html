@@ -11,7 +11,6 @@
 <style></style>
 
 <body>
-
   <div class="container">
     <div id="startScreen" class="screen">
     <h1>Leaf Cutter Ants 🐜🍃</h1>
@@ -35,10 +34,15 @@
 
   <div id="question2" class="screen hidden">
     <p>Question Two: Which statement is true?</p>
-    <div class="buttons">
-      <button id="btn1" class="button">1. They can carry 50x their weight</button>
-      <button id="btn2" class="button">2. They eat the leaves they cut</button>
-      <button id="btn3" class="button">3. They are poisonous</button>
+    
+    <div class="q2-container">
+      <div class="buttons">
+        <button id="btn1" class="button">1. They can carry 50x their weight</button>
+        <button id="btn2" class="button">2. They eat the leaves they cut</button>
+        <button id="btn3" class="button">3. They are poisonous</button>
+      </div>
+
+      <img class="q2" src="https://png.pngtree.com/png-vector/20220902/ourmid/pngtree-ant-animal-colored-cartoon-illustration-picture-image-marching-vector-png-image_48330640.jpg"/>
     </div>
 
     <p id="result2" class="result-text"></p>
@@ -48,12 +52,16 @@
 
   <div id="question3" class="screen hidden">
     <p>Question Three: Where do leaf cutter ants live?</p>
-    <div class="buttons">
-      <button id="btn4" class="button">1. Africa </button>
-      <button id="btn5" class="button">2. Central America</button>
-      <button id="btn6" class="button">3. Southeast Asia</button>
-    </div>
 
+    <div class="q3-container">
+      <div class="buttons">
+        <button id="btn4" class="button">1. Africa </button>
+        <button id="btn5" class="button">2. Central America</button>
+        <button id="btn6" class="button">3. Southeast Asia</button>
+      </div>
+
+      <img class="q3" src="https://t3.ftcdn.net/jpg/04/99/07/68/360_F_499076812_XS8UnyqkM7aEb7B3NegUkcMx6TuVuJqG.jpg"/>
+    </div>
     <p id="result3" class="result-text"></p>
 
     <button id="nextBtn4" class="button">Next Question →</button>
@@ -61,10 +69,14 @@
 
   <div id="question4" class="screen hidden">
     <p>Question Four: True or false: Leaf cutter ants are majority male</p>
-    <div class="buttons">
-      <button id="btn7" class="button">False</button>
-      <button id="btn8" class="button">True</button>
-    </div>
+    <div class="q3-container">
+      <div class="buttons">
+        <button id="btn7" class="button">False</button>
+        <button id="btn8" class="button">True</button>
+      </div>
+
+      <img class="q4" src="https://ecdn.teacherspayteachers.com/thumbitem/ANT-CLIPART-Lifecycle-and-Adorable-Ants-1453507289/original-644497-3.jpg"/>
+    </div>  
 
     <p id="result4" class="result-text"></p>
 
@@ -73,10 +85,14 @@
   
   <div id="question5" class="screen hidden">
     <p>Question Five: Which statement is true?</p>
-    <div class="buttons">
-      <button id="btn9" class="button">1. Leafcutter ant colonies are big enough for a human to stand in one</button>
-      <button id="btn10" class="button">2. Leafcutter ants are carnivorous</button>
-      <button id="btn11" class="button">3. Leafcutter ant colonies have 10 castes </button>    
+    <div class="q4-container">
+      <div class="buttons">
+        <button id="btn9" class="button">1. Leafcutter ant colonies are big enough for a human to stand in one</button>
+        <button id="btn10" class="button">2. Leafcutter ants are carnivorous</button>
+        <button id="btn11" class="button">3. Leafcutter ant colonies have 10 castes </button>    
+      </div>
+
+      <img class="q5" src="https://www.flapest.com/wp-content/uploads/2018/10/florida-anthill.jpg"/>
     </div>
 
     <p id="result5" class="result-text"></p>
@@ -95,7 +111,12 @@
     <p id="result6" class="result-text"></p>
 
     <button id="nextBtn7" class="button">Next Question →</button>
-  </div>    
+  </div> 
+  
+  <div id="finalScreen" style="display:none;">
+    <h1>Your Score:</h1>
+   <p id="finalScore"></p>
+  </div>
 
     
     </div>
